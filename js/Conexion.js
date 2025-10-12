@@ -30,7 +30,7 @@ async function General() {
   }
   Home();
 }
-General();
+
 async function FiltroConexion(Elfiltro){
   document.getElementById("la-lista").innerHTML = "";
   personajes = await Conexion(Elfiltro);

@@ -33,7 +33,7 @@ function buscadorfuncion(sza){
 
 
 function Home(){
-  //buscador
+    document.getElementById("root").innerHTML = "";
     const buscador = document.createElement("input");
     buscador.classList.add("c-buscador");
     buscador.type = "text";
@@ -44,7 +44,7 @@ function Home(){
 
    
     const species = [
-        "Human", "Alien", "Humanoid", "Poopybutthole", "Mythological_Creature", "Animal", "Robot", "Cronenberg", "Disease", "unknown"
+        "Human", "Alien", "Humanoid", "Poopybutthole", "Mythological Creature", "Animal", "Robot", "Cronenberg", "Disease", "unknown"
     ];
 
     const contenedorFiltro = document.createElement("section");

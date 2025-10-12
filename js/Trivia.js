@@ -1,0 +1,53 @@
+
+async function Trivia() {
+    document.getElementById("root").innerHTML = `<section class='c-trivia'><h2>Cargando Personaje...</h2></section>`;
+    // Genera un id aleatorio entre 1 y 826
+    const id = Math.floor(Math.random() * 826) + 1;
+    const res = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
+    const personaje = await res.json();
+    // Mostrar la trivia en el root
+    document.getElementById("root").innerHTML = `
+        <section class="c-trivia">
+            <h2>¿Este personaje en que estado se encuentra?</h2>
+            <img src="${personaje.image}" height="120" width="auto">
+            <h3>${personaje.name}</h3>
+            <div>
+                <button onclick="verificarEstado('${personaje.status}', 'Alive')">Alive</button>
+                <button onclick="verificarEstado('${personaje.status}', 'Dead')">Dead</button>
+                <button onclick="verificarEstado('${personaje.status}', 'unknown')">Unknown</button>
+            </div>
+            <br>
+             <h2>¿Qué especie es ${personaje.name}?</h2>
+            <div>
+            <button onClick="verificarEspecie('${personaje.species}', 'Human')">Human</button>
+            <button onClick="verificarEspecie('${personaje.species}', 'Alien')">Alien</button>
+            <button onClick="verificarEspecie('${personaje.species}', 'Robot')">Robot</button>
+            <button onClick="verificarEspecie('${personaje.species}', 'Animal')">Animal</button>
+            <button onClick="verificarEspecie('${personaje.species}', 'unknown')">Unknown</button>
+            <button onClick="verificarEspecie('${personaje.species}', 'Humanoid')">Humanoid</button>
+            <button onClick="verificarEspecie('${personaje.species}', 'Mythological Creature')">Mythological Creature</button>
+            <button onClick="verificarEspecie('${personaje.species}', 'Disease')">Disease</button>
+            <button onClick="verificarEspecie('${personaje.species}', 'Cronenberg')">Cronenberg</button>
+            <button onClick="verificarEspecie('${personaje.species}', 'Poopybutthole')">Poopybutthole</button>
+            </div>
+            <button onclick="Trivia()">Nuevo Personaje</button>
+        </section>
+    `;
+    
+}
+
+
+function verificarEstado(status, seleccion) {
+  if((status===seleccion)){
+    alert("¡Correcto!");
+  }else{
+    alert("Incorrecto, El personaje está: " + status)
+  }
+}
+function verificarEspecie(species, seleccion) {
+    if (species === seleccion) {
+        alert("¡Correcto!");
+    } else {
+        alert("Incorrecto. La especie del personaje es: " + species);
+    }
+}
