@@ -44,19 +44,30 @@ async function Personaje(id){
 
     favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
     esFavorito = favoritos.some(per => per.name === data.name);
-        
-        root.innerHTML = `
-            <section class="c-detalle">
-                <img src="${data.image}" height="120" width="auto">
-                <p>Nombre: ${data.name}</p>
-                <p>ID: ${data.id}</p>
-                <p>Especie: ${data.species}</p>
-                <p>Estado: ${data.status}</p>
-                <p>Origen: ${data.origin.name}</p>
-                <button onClick="toggleFavorito(${data.id}, '${data.name}','${data.image}')">
-        <span id="corazon-${data.id}">${esFavorito ? '❤️' : '🤍'}</span> Favorito
-      </button>
-            </section>
-        `;
+
+
+
+    let primerEpisodio = "";
+    if (data.episode.length > 0) {
+        const resEp = await fetch(data.episode[0]);
+        const epData = await resEp.json();
+        primerEpisodio = epData.name;
+    }
+    
+    document.body.classList.add(data.species.toLowerCase().replace(/\s+/g, ""));
+    root.innerHTML = `
+        <section class="c-detalle">
+            <img src="${data.image}" height="200" width="auto">
+            <p>Nombre: ${data.name}</p>
+            <p>ID: ${data.id}</p>
+            <p>Especie: ${data.species}</p>
+            <p>Estado: ${data.status}</p>
+            <p>Origen: ${data.origin.name}</p>
+            <p>Primer episodio en que apareció: ${primerEpisodio}</p>
+            <button onClick="toggleFavorito(${data.id}, '${data.name}','${data.image}')">
+                <span id="corazon-${data.id}">${esFavorito ? '❤️' : '🤍'}</span> Favorito
+            </button>
+        </section>
+    `;
 }
 

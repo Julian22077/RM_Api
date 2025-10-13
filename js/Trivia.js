@@ -1,5 +1,6 @@
 
 async function Trivia() {
+    document.body.className = ""; 
     document.getElementById("root").innerHTML = `<section class='c-trivia'><h2>Cargando Personaje...</h2></section>`;
     // Genera un id aleatorio entre 1 y 826
     const id = Math.floor(Math.random() * 826) + 1;

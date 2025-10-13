@@ -3,9 +3,9 @@ function generarLista(arraypersonajes) {
         for (let i = 0; i < arraypersonajes.length; i++) {
             let id = arraypersonajes[i].id;
                 listaHTML += `
-                <div class="c-lista-pokemon poke-${id}" onclick="Personaje('${id}')">
+                <div class="c-lista-personaje per-${id}" onclick="Personaje('${id}')">
                     <p>${id}</p>
-                    <img src="${arraypersonajes[i].image}" width="auto" height="60" loading="lazy">
+                    <img src="${arraypersonajes[i].image}"  loading="lazy">
                     <p>${arraypersonajes[i].name}</p>
                 </div>`;
         }
@@ -33,6 +33,7 @@ function buscadorfuncion(sza){
 
 
 function Home(){
+    document.body.className = ""; 
     document.getElementById("root").innerHTML = "";
     const buscador = document.createElement("input");
     buscador.classList.add("c-buscador");

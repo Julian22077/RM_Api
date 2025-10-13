@@ -1,0 +1,96 @@
+
+body.human { background-color: #3f4441}
+body.alien { background-color: #1e2a78  }
+body.humanoid { background-color: #7a3f8c  }
+body.poopybutthole { background-color: #e3c800 }
+body.mythologicalcreature { background-color: #4e8c4a  }
+body.animal { background-color: #b36b2c }
+body.robot { background-color: #6e7b8b }
+body.cronenberg { background-color: #a83232 }
+body.disease { background-color: #2ca8b3  }
+body.unknown { background-color: #444  }
+
+.c-lista-personaje {
+    display:inline-block;
+    background: #3f4441;
+    border-radius: 12px;
+    margin: 8px;
+    padding: 16px;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.2s
+}
+.c-lista-personaje:hover {
+    transform: scale(1.03);
+    
+}
+.c-lista-personaje img {
+    border-radius: 20px;
+    margin-bottom: 8px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.c-lista-personaje p {
+    margin: 4px 0;
+    font-weight: bold;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #121312;
+}
+
+button{
+    background-color:transparent;
+    border: unset;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 7px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:white;
+    transition: 0.5s;
+}
+button:hover{
+    transform: scale(1.3);
+}
+.c-buscador{
+    margin:10px;
+    padding:5px;
+    border-radius:10px;
+
+}
+.c-detalle{
+   
+    margin: 8px;
+    padding: 16px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.c-detalle img {
+    border-radius: 20px;
+    margin-bottom: 8px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.c-informativa{
+    margin: 8px;
+    padding: 16px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.c-trivia{
+    margin: 8px;
+    padding: 16px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.c-trivia img {
+    border-radius: 20px;
+    margin-bottom: 8px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
