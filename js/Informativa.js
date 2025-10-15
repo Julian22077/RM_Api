@@ -1,9 +1,9 @@
 function Informativa() {
-    document.body.className = ""; 
+    document.body.style.backgroundColor = "rgb(129,194,32)";
     document.getElementById("root").innerHTML=`<section class="c-informativa">
     <h1><a href="https://rickandmortyapi.com/api/character/">R&M API</a></h1>
     <h2>Julián Camilo Lozano Hernández</h2>
     <img src="Logo.png">
-    <p>Api con información de 826 personajes</p>
+    <p>Api con información de 826 personajes de la famosa serie de Rick and Morty, contiene información como el nombre, la especie,el estado,etc.</p>
     </section>`;
 }
