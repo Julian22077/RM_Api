@@ -17,6 +17,7 @@ async function Trivia() {
                 <button onclick="verificarEstado('${personaje.status}', 'Dead')">Dead</button>
                 <button onclick="verificarEstado('${personaje.status}', 'unknown')">Unknown</button>
             </div>
+            <p id="resultado-estado"></p>
             <br>
              <h2>¿Qué especie es ${personaje.name}?</h2>
             <div>
@@ -31,6 +32,8 @@ async function Trivia() {
             <button onClick="verificarEspecie('${personaje.species}', 'Cronenberg')">Cronenberg</button>
             <button onClick="verificarEspecie('${personaje.species}', 'Poopybutthole')">Poopybutthole</button>
             </div>
+            <p id="resultado-especie"></p>
+            <br>
             <button onclick="Trivia()">Nuevo Personaje</button>
         </section>
     `;
@@ -39,16 +42,18 @@ async function Trivia() {
 
 
 function verificarEstado(status, seleccion) {
+    const resultado = document.getElementById("resultado-estado");
   if((status===seleccion)){
-    alert("¡Correcto!");
+    resultado.textContent="¡Correcto!";
   }else{
-    alert("Incorrecto, El personaje está: " + status)
+    resultado.textContent="Incorrecto. El estado del personaje es: "+status;
   }
 }
 function verificarEspecie(species, seleccion) {
+     const resultado = document.getElementById("resultado-especie");
     if (species === seleccion) {
-        alert("¡Correcto!");
+     resultado.textContent = "¡Correcto!";
     } else {
-        alert("Incorrecto. La especie del personaje es: " + species);
+       resultado.textContent = "Incorrecto. La especie del personaje es: " + species;
     }
 }
