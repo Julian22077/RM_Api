@@ -1,6 +1,6 @@
 
 async function Trivia() {
-  document.body.style.backgroundImage = "none";
+    document.body.style.backgroundColor = "";
   document.body.className = ""; 
     
     document.getElementById("root").innerHTML = `<section class='c-trivia'><h2>Cargando Personaje...</h2></section>`;
