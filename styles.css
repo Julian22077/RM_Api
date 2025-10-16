@@ -8,7 +8,7 @@ body.animal { background-color: #b36b2c }
 body.robot { background-color: #6e7b8b }
 body.cronenberg { background-color: #a83232 }
 body.disease { background-color: #2ca8b3  }
-body.unknown { background-color: #444  }
+body.unknown { background-color: #987a7a  }
 
 .c-lista-personaje {
     display:inline-block;

@@ -1,6 +1,6 @@
 function Favoritos(){
     document.body.className = ""; 
-    document.body.style.backgroundColor = "";
+    document.body.style.backgroundImage = "none";
     let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
     if(favoritos.length == 0){
         document.getElementById("root").innerHTML = "no hay favoritos"
