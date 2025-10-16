@@ -33,7 +33,7 @@ function buscadorfuncion(sza){
 
 
 function Home(){
-    document.body.style.backgroundColor = "";
+   
     document.body.className = ""; 
     
     document.getElementById("root").innerHTML = "";
