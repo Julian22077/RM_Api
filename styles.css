@@ -129,7 +129,7 @@ button:hover{
   margin-top:6px;
 }
 body.informativa {
-  background-image: url("portal.png");
+  background-image: url("file:///android_asset/portal.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

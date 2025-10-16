@@ -1,4 +1,5 @@
 function Informativa() {
+
     document.body.className = "informativa";
     document.getElementById("root").innerHTML=`<section class="c-informativa">
     <h1><a href="https://rickandmortyapi.com/api/character/">R&M API</a></h1>
