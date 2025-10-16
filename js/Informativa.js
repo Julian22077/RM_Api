@@ -1,5 +1,5 @@
 function Informativa() {
-    document.body.style.backgroundImage = "url('portal.jpg')";
+    document.body.style.backgroundImage = "url('portal.png')";
     document.getElementById("root").innerHTML=`<section class="c-informativa">
     <h1><a href="https://rickandmortyapi.com/api/character/">R&M API</a></h1>
     <h2>Julián Camilo Lozano Hernández</h2>
