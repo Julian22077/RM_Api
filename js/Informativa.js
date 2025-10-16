@@ -1,6 +1,5 @@
 function Informativa() {
-
-    document.body.className = "informativa";
+    document.body.style.backgroundColor = "rgba(2, 197, 12, 1)";
     document.getElementById("root").innerHTML=`<section class="c-informativa">
     <h1><a href="https://rickandmortyapi.com/api/character/">R&M API</a></h1>
     <h2>Julián Camilo Lozano Hernández</h2>

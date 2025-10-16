@@ -128,13 +128,8 @@ button:hover{
   display:inline-block;
   margin-top:6px;
 }
-body.informativa {
-  background-image: url("file:///android_asset/portal.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-}
+
+
 
 
 @media (max-width: 400px){
